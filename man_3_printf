@@ -1,0 +1,15 @@
+.TH _printf - Holberton School project by Philippe & Omer - Nov, 2023
+.SH NAME
+_printf \- show inputs in formatted way to output.
+.SH SYNOPSIS
+.B _printf
+(\fB\-n\fR \fItext\fR)
+.SH DESCRIPTION
+.B _printf
+printf outputs formatted text to the console in C, with format specifiers for integers.
+.SH OPTIONS
+.TP
+.BR \%d ", " \%i ", " \%s ", " \%f serving as format specifiers for integers.
+.SH OPTIONS
+.TP
+Outputed format took the specified format before printing.
