@@ -7,6 +7,7 @@
 
 #include <limits.h>
 #include <stdio.h>
+#include <stdarg.h> /* Fonctions variadiques (va_list, va_start, va_end...) */
 
 /**
  * Prototypes
