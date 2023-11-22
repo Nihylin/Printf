@@ -8,14 +8,15 @@
 
 int _printf(const char *format, ...)
 {
-	int index = 0;
-
+	int count = 0;
+	int (*function)(va_list);
 	va_list args;
+	
 	va_start (args, format);
 
 	/* Stuff happens */
 
 	va_end (args);
 
-	return (index);
+	return (count);
 }
