@@ -1,13 +1,12 @@
 #include "main.h"
 
 /**
- * _printinteger - writes an integer to stdout
- * @n: The integer to print
- *
- * Return: The number of digits printed (excluding sign).
+ * _printinteger - prints an integer
+ * @args: list of arguments from variadic function printf
+ * Return: int (length of the printed int)
  */
-void	_printinteger(int n)
+
+int _printinteger(va_list args)
 {
-	while (n != '/0')
-		_putchar(n + '0');
+
 }

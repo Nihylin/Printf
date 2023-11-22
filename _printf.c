@@ -13,11 +13,7 @@ int _printf(const char *format, ...)
 	va_list args;
 	va_start (args, format);
 
-	for (format[index] ; format[index] != '\0' ; format++)
-	{
-		_putchar(index);
-		/* va_arg */
-	}
+	/* Stuff happens */
 
 	va_end (args);
 

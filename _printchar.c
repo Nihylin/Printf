@@ -1,12 +1,15 @@
 #include "main.h"
 
 /**
- * _printchar - writes a character to stdout
- * @c: The character to print
- *
- * Return: void
+ * _printchar - prints a character
+ * @args: list of arguments from variadic function printf
+ * Return: int (1, length of the printed character)
  */
-void	_printchar(char c)
+
+int _printchar(va_list args)
 {
+	char c = va_arg(args, char);
+
 	_putchar(c);
+	return (1);
 }

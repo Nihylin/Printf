@@ -1,13 +1,12 @@
 #include "main.h"
 
 /**
- * _printpercent - writes a percent character to stdout
- * @c: The percent character to print
- *
- * Return: void
+ * _printpercent - prints a percent character
+ * Return: int (1, length of the % char)
  */
 
-void	_printpercent(char c)
+int _printpercent(void)
 {
-	_putchar(c);
+	_putchar('%');
+	return (1);
 }

@@ -1,16 +1,12 @@
 #include "main.h"
 
 /**
- * _putstring - prints a string to stdout
- * @str: The string to print
- *
- * Return: void
+ * _putstring - prints a string
+ * @args: list of arguments from variadic function printf
+ * Return: int (length of the printed string)
  */
-void	_putstring(char *str)
+
+int _putstring(va_list args)
 {
-	while (*str != '\0')
-	{
-		write(1, &(*str), 1);
-		str++;
-	}
+
 }
