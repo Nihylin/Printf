@@ -23,6 +23,30 @@ void _putinteger(int n)
 }
 
 /**
+ * _countDigit - counts the digits of the int being printed
+ * @n: the int being printed
+ * Return: int (length of the printed int)
+*/
+
+int _countDigit(int n)
+{
+	int count = 0;
+
+	if (n == 0)
+	{
+		return (1);
+	}
+
+	while (n != 0)
+	{
+		n = n / 10;
+		++count;
+	}
+
+	return (count);
+}
+
+/**
  * _printinteger - prints an integer
  * @args: list of arguments from variadic function printf
  * Return: int (length of the printed int)
@@ -33,5 +57,5 @@ int _printinteger(va_list args)
 	int n = va_arg(args, int);
 
 	_putinteger(n);
-	return (1);
+	return (_countDigit(n));
 }

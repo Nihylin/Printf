@@ -16,6 +16,7 @@ int _printstring(va_list args);
 int _printpercent(va_list args);
 int _printinteger(va_list args);
 void _putinteger(int n);
+int _countDigit(int n);
 int _printchar(va_list args);
 
 /* Structures */
