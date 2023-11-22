@@ -12,8 +12,8 @@ int (*_getFunction(const char *nextChar))(va_list)
 		{'c', _printchar},
 		//{'s', _printstring},
 		{'%', _printpercent},
-		//{'i', _printinteger},
-		//{'d', _printinteger},
+		{'i', _printinteger},
+		{'d', _printinteger},
 		{'\0', NULL}
 	};
 
