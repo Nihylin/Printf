@@ -4,22 +4,45 @@
  * _printf - prints formatted strings
  * @format: specified format
  * Return: int (number of characters printed)
-*/
+ */
 
 int _printf(const char *format, ...)
 {
-	int index = 0;
-
+	int count = 0;
+	int (*function)(va_list);
 	va_list args;
-	va_start (args, format);
 
-	for (format[index] ; format[index] != '\0' ; format++)
+	va_start(args, format);
+
+	if (format == NULL)
 	{
-		_putchar(index);
-		/* va_arg */
+		return (-1);
 	}
 
-	va_end (args);
+	while (*format)
+	{
+		if (*format != '%')
+		{
+			_putchar(*format);
+			count++;
+		}
+		else
+		{
+			format++;
+			function = _getFunction(format);
+			if (function)
+			{
+				count += function(args);
+			}
+			else
+			{
+				_putchar(*format);
+				count += 2;
+			}
+		}
+		format++;
+	}
 
-	return (index);
+	va_end(args);
+	return (count);
 }
