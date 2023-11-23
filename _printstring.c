@@ -11,13 +11,17 @@ int _printstring(va_list args)
     int count;
     char *str;
 
-    str = args;
+    str = va_arg(args, char*);
     count = 0; 
     while (*str)
     {
         _putchar(*str);
+        count++;
         str++;
-        count++;    
+    }
+    if (str == NULL)
+    {
+        str = "(null)";
     }
     return (count);
 }
