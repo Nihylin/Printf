@@ -10,16 +10,20 @@ _printf \- print formatted data to the standard output.
  This function returns the number of characters printed (the total legth of the string). If format is NULL or only contains '%', the function returns -1.
 .SH FORMAT SPECIFIERS   
  The following format specifers are supported:
+ "%d"/"%i" (for integer), "%c" (for char), "%s" (for string)
 .TP
 .SH EXAMPLES
 Print an integer:
-_printf("The answer is %d\\n", 42);
+_printf("The answer is %d\\n", 42); 
+.B Result: "The answer is 42"
 
 Print a string:
-_printf("Hello, %s!\\n", "world");
+_printf("Hello, %s!\\n", "world"); 
+.B Result : "Hello, world!"
 
 Print a character:
-_printf("First letter: %c\n", 'A');
+_printf("First letter: %c\n", 'A'); 
+.B Result: "First letter: A" 
 .SH NOTES
 - The _printf() function may not support all the format specifiers provided by the standard printf function. Refer to the documentation for a list of supported specifiers.
 
