@@ -8,5 +8,16 @@
 
 int _printstring(va_list args)
 {
+    int count;
+    char *str;
 
+    str = args;
+    count = 0; 
+    while (*str)
+    {
+        _putchar(*str);
+        str++;
+        count++;    
+    }
+    return (count);
 }
