@@ -10,7 +10,7 @@ int (*_getFunction(const char *nextChar))(va_list)
 {
 	specification_t specificationStructure[] = {
 		{'c', _printchar},
-		//{'s', _printstring},
+		{'s', _printstring},
 		{'%', _printpercent},
 		{'i', _printinteger},
 		{'d', _printinteger},

@@ -2,44 +2,44 @@
 
 /**
  * _putinteger - uses the _putchar function to print an integer
- * @n: the int being printed
+ * @number: the int being printed
  * Return: nothing (void)
 */
 
-void _putinteger(int n)
+void _putinteger(int number)
 {
-	if (n < 0)
+	if (number < 0)
 	{
 		_putchar('-');
-		n = -n;
+		number = -number;
 	}
 
-	if (n / 10)
+	if (number / 10)
 	{
-		_putinteger(n / 10);
+		_putinteger(number / 10);
 	}
 
-	_putchar(n % 10 + '0');
+	_putchar(number % 10 + '0');
 }
 
 /**
  * _countDigit - counts the digits of the int being printed
- * @n: the int being printed
+ * @number: the int being printed
  * Return: int (length of the printed int)
 */
 
-int _countDigit(int n)
+int _countDigit(int number)
 {
 	int count = 0;
 
-	if (n == 0)
+	if (number == 0)
 	{
 		return (1);
 	}
 
-	while (n != 0)
+	while (number != 0)
 	{
-		n = n / 10;
+		number = number / 10;
 		++count;
 	}
 
@@ -54,8 +54,8 @@ int _countDigit(int n)
 
 int _printinteger(va_list args)
 {
-	int n = va_arg(args, int);
+	int number = va_arg(args, int);
 
-	_putinteger(n);
-	return (_countDigit(n));
+	_putinteger(number);
+	return (_countDigit(number));
 }

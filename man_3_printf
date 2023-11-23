@@ -1,4 +1,4 @@
-.TH _printf 3 "21 november 2023""_printf man page"
+.TH _printf 3 "_printf man page"
 .SH NAME
 _printf \- print formatted data to the standard output.
 .SH SYNOPSIS
@@ -7,7 +7,7 @@ _printf \- print formatted data to the standard output.
  The _printf() function prints formatted data to the standard output. It parses the format string and processes each conversion specifier by calling the appropriate function to print the corresponding data type (example : "%d"/"%i" (for integer), "%c" (for char), "%s" (for string))
 . Additional arguments after format are retrieved using va_list and va_start to access the variable arguments.
 .SH RETURN VALUE
- This function returns the number of characters printed (the total legth of the string). If format is NULL or only contains '%', the function returns -1.
+ This function returns the number of characters printed (the total length of the string). If format is NULL, the function returns -1.
 .SH FORMAT SPECIFIERS   
 The following format specifiers are supported:
 
@@ -42,7 +42,7 @@ _printf("First letter: %c\n", 'A');
 .B man printf
 .SH AUTHORS
 .B Omer Ozturk <7434@holbertonstudents.com> /
-.B Philippe Wanquetin <nihylin@gmail.com>
+.B Philippe Wanquetin <philippe.wanquetin@gmail.com>
 
 
 

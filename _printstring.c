@@ -8,20 +8,22 @@
 
 int _printstring(va_list args)
 {
-    int count;
-    char *str;
+	int count = 0;
+	char *str;
 
-    str = va_arg(args, char*);
-    count = 0; 
-    while (*str)
-    {
-        _putchar(*str);
-        count++;
-        str++;
-    }
-    if (str == NULL)
-    {
-        str = "(null)";
-    }
-    return (count);
+	str = va_arg(args, char*);
+
+	if (str == NULL)
+	{
+		str = "(null)";
+	}
+
+	while (*str)
+	{
+		_putchar(*str);
+		count++;
+		str++;
+	}
+
+	return (count);
 }
