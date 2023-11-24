@@ -3,7 +3,7 @@
 </p>
 
 # <p align="center">_printf</p>
-In C language, printf() function is used to print formatted output to the standard output stdout (which is generally the console screen).  The printf function is a part of the C standard library <stdio.h> and it can allow formatting the output in numerous ways. 
+In C language, printf() function is used to print formatted output to the standard output stdout (which is generally the console screen). The printf function is a part of the C standard library <stdio.h> and it can allow formatting the output in numerous ways.
 
 In this repository, we are going to replicate the printf function and make it our own.
 
